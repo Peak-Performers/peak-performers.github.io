@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <title>Mechanical Lab</title>
+    <link href="../normalize.css" rel="stylesheet" type="text/css"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.1.1-dist/bootstrap.min.css" media="screen" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="bstyle.css" rel="stylesheet" type="text/css"/>
+    <link href="fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="overlay.css" rel="stylesheet" type="text/css"/> <!--style for overlay color changer,
+  will be removed in production-->
+    <script src="colorchanger.js" type="text/javascript"></script> <!--script for overlay color changer-->
+    <!--   &lt;link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'&gt;
+      &lt;link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'&gt; -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]&gt;
+      &lt;script src="../../assets/js/html5shiv.js"&gt;&lt;/script&gt;
+      &lt;script src="../../assets/js/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]-->
+</head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+
+<nav class="navbar navbar-default visible-lg" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Mechanical Lab</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="desk-nav">
+        <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Home</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="about.html">About this lab</a></li>
+            <li><a href="#">Explore Vlabs</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right visible-lg">
+            <li><div class="icons"><img src="images/bncet.png"/></div></li>
+            <li><div class="icons"><img src="images/vlabs.jpg"/></div></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+<div class="hidden-lg">
+    <nav class="navbar navbar-default mobile-nav" role="navigation">
+        <div class="nav navbar-nav pull-right">
+            <a href="index.html"><span class="glyphicon glyphicon-home"></span></a><a href="about.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="#"><span class="glyphicon glyphicon-send"></span></a>
+        </div>
+    </nav>
+    <p class="experiment-mobile-title">Mechanical Lab</p>
+</div>
+
+<div class="colorchanger">
+    <button class="btn btn-primary" id="color1" onclick="colorChange('#3652a4','#ced8ef');" type="button"></button>
+    <button class="btn btn-primary" id="color2" onclick="colorChange('#428bca','#E3ECF3');" type="button"></button>
+    <button class="btn btn-primary" id="color3" onclick="colorChange('#7FBC7C','#D4E9D3');" type="button"></button>
+    <button class="btn btn-primary" id="color4" onclick="colorChange('#2c373b','#cbd3d5');" type="button"></button>
+</div>
+
+<div class="row">
+
+    <a href="exp/index.html">
+        <div class="col-lg-6">
+            <div class="experiment-card">
+                <p class="experiment-title"> Numerical Approximation</p>
+
+
+                <div class="img-thum">
+                    <img class="experiment-thumbnail" src="imgs/exp1.png"/>
+                </div>
+
+
+                <div class="experiment-description">
+                    <p>This experiment demonstrates the idea that one can attain a perfect solution in the limit by suucessively computing approximations to the exact value. The intent behind this experiment is to make use of ideas laerned in the previous experiments. This is intended to introduce the student to numerical methods.
+                    </p>
+                </div>
+                <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br/>
+                    1. To understand that for some problems an approximate numerial solution is as good as the exact solution for practical purposes.<br/>
+                </p>
+                <p class="experiment-prereq">Prerequisite : </p>
+
+            </div>
+        </div>
+    </a>
+
+</div>
+
+<!-- &lt;div class="row"&gt;
+    &lt;div class="col-lg-6"&gt;
+      &lt;div class="experiment-card"&gt;
+        &lt;p class="experiment-title"&gt;&lt;a href="exp11/index.html"&gt;11. Rasterization: Polygon&lt;/a&gt;&lt;/p&gt;
+        &lt;div class="img-thum"&gt;
+         &lt;img class="experiment-thumbnail" src="imgs/exp11.png"&gt;
+       &lt;/div&gt;
+
+
+       &lt;div class="experiment-description"&gt;
+        &lt;p&gt;When a polygon is transformed from a set of edges in the continous form of y = mx + c into a set of pixels occupied by the interior of the polygon, this transformation is called polygon rasterization. When we rasterize a polygon, we obtain the set of pixels that are required to fill the interior area of a bounded polygon. This experiment demonstrates the working of Scan-Line Polygon Fill algorithm.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;p class="experiment-outcome"&gt;The objective of this experiment is to understand the steps of filling a polygon in a 2D frame buffer. Given the vertices of the polygon, the experiment outputs a filled polygon. Here we have demonstrated the steps of Scan Line Poylgon Fill algorithm.&lt;/p&gt;
+      &lt;p class="experiment-prereq"&gt;Prerequisite : Exp1, Exp2, Exp3&lt;/p&gt;
+
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-lg-6"&gt;
+  &lt;/div&gt;
+&lt;/div&gt; -->
+
+
+
+
+</body>
+</html>
