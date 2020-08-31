@@ -17,7 +17,6 @@ body {
 .experiment-mobile-title{
     text-align: center;
     font-weight: bold;
-    text-align: center;
     font-size: 2em;
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.1em;
@@ -32,7 +31,7 @@ body {
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
     color: #fff;
-    background-color: #3652a4;
+    background-color: #a4214b;
 }
 
 .lab-manual{
@@ -44,11 +43,11 @@ body {
     position: center;
     /*padding: 1.5em 2em 1.5em 2em;*/
     border-radius: 1em;
-    border:0px solid #3652a4;
+    border:0px solid #a4214b;
     min-height: 0.5%;
     color:  rgb(80, 80, 80); /* #333 */
     margin-top: 1em;
-    background-color: #ced8ef;
+    background-color: #efd7d3;
 }
 
 
