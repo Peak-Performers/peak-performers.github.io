@@ -56,13 +56,13 @@
 }
 
 .icons{
-    padding-right:0.5%;
-    /*padding-top: 5%*/
+    padding-right: 30%;
+    padding-top: 0.5%
 }
 
 .icons img{
-    width: 65%;
-    height: 65%;
+    width: 100%;
+    height: 100%;
 }
 
 .navbar-default {
@@ -73,6 +73,36 @@
     font-family: 'Actor', sans-serif;
     background: #a4214b;
     border-color: #e7dcdd;
+}
+
+.navbar-default1 .navbar-brand1{
+    padding-left: 300px;
+    font-weight: bold;
+    text-align: center;
+    animation-name: moveToLeft;
+    animation-duration: 10s;
+}
+@keyframes moveToLeft{
+    0%{
+        transform:translateX(150px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+
+.navbar-default1 {
+    height: 120px;
+    padding-top: 5px;
+    padding-left: 45px;
+    padding-right: 45px;
+    font-size: 2.0em;
+    font-family: 'Actor', sans-serif;
+    background: #100607;
+    border-color: darkslategray;
+    color: #ffffff;
 }
 
 
