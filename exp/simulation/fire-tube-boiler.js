@@ -1,7 +1,6 @@
-
 window.model = {
-    inputValueA:'', // user input a.
-    inputValueB: '', // user input b.
+    inputValueA: '', // user input a.
+    inputValueB: '', // usre input b.
     sum: 0, //total sum that compute by computeSum method.
     width: 1, //width of executing one step.
     //  computeSum: compute total sum of area under cos curve.
@@ -17,8 +16,8 @@ incrementInWidth: function () {
 
 window.view = {
     wavelengthController: .0472, //control wavelength of cos curve.
-    xCoordinatesValue: 0, // value of x coordinate.
-    yCoordinatesValue: 0, // value of y coordinate.
+    //xCoordinatesValue: 0, // value of x coordinate.
+    // yCoordinatesValue: 0, // value of y coordinate.
     sum: 0, //  round up the sum(model.sum) value to 2 decimal points.
     canvasContext: '', // canvasContext have many properties and methods for drawing paths, boxes, circles, text, images, and more.
     canvas: new Object(), // Object value of canvas.
