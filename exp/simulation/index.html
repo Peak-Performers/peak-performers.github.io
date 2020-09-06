@@ -34,9 +34,9 @@
         <div class="inputDivisionTitle"><div class="experimentPic"></div><div class="experimentText">Initialize</div></div>
         <div class="inputDivisionBody" id="inputDivisionSimpleLoop">
             <div class="variableText">Initialize variables</div>
-            <input class="inputField" id="valueA" placeholder="Value of total weight of floating object and load " size="10" type="text"/>
-            <input class="inputField" id="valueB" placeholder="Value of weight of load" size="10" type="text"/>
-            <label class="inputField" size="10" type="text"> Value of displacement in load (use range slider given below) :</label>
+            <input class="inputField" id="valueA" value="Value of total weight of floating object = 1.5 Kg " size="10" type="text"/>
+            <input class="inputField" id="valueB" value="Value of weight of load = 0.3056 Kg" size="10" type="text"/>
+            <label class="inputField" size="10" type="text"> Value of displacement in load (use range slider given below, in mm) :</label>
             <input class="inputField" id="valueD" min="-80" max="80" value="0" step="10" size="10" type="range"/>
             <button class="button startButton" id="okBtnId">OK</button>
             <button class="buttonDisable myStartButton" disabled="" id="startBtnId">Start</button><button class="buttonDisable myStartButton hide" disabled="" id="stopBtnId">Stop</button>
@@ -70,7 +70,7 @@
     <div class="outputDivisionTitle"><div class="outputPic"></div><div class="outputText">Graph Visualization</div></div>
     <div class="resultDisplay" id="resultDisplay">
         <div class="graph">
-            <canvas class="canvas" height="300" id="myCanvas" width="420"></canvas>
+            <canvas class="canvas" height="300" id="myCanvas" width="420">Your browser does not support the HTML5 canvas tag.</canvas>
         </div><!-- end of FirstInputBlock -->
         <div class="gapBitweenMeamoryGap"></div>
         <div class="textAlignLeft" id="resultShowDiv">

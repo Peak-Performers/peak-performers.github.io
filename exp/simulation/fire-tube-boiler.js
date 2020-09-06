@@ -150,27 +150,27 @@ window.view ={
     /* validationInput: check validation of input that is given by user and if input value is valid
     then make text field and ok button disable and make start button enable. */
     validationInput: function () {
-        var valueA1 = this.getValue('valueA');
-        var valueB1 = this.getValue('valueB');
-        var valueC1 = this.getValue('valueC');
+        // var valueA1 = this.getValue('valueA');
+        // var valueB1 = this.getValue('valueB');
+        // var valueC1 = this.getValue('valueC'); //todo for tilt angle
         var valueD1 = this.getValue('valueD');
-        var valueC2 = valueC1 * (180/(Math.PI));
-        if (valueA1 === '' || valueB1 === '' || valueC1==='') {
+        // var valueC2 = valueC1 * (180/(Math.PI));
+        /* if (valueA1 === '' || valueB1 === '' || valueC1==='') {
             alert('Enter Value of weight of floating object, weight of load and tilt angle');
             return false;
         }
-        else if ( isNaN(valueA1) || isNaN(valueB1) || isNaN(valueC1)) {
+         else if ( isNaN(valueA1) || isNaN(valueB1) || isNaN(valueC1)) {
             alert('Enter numeric value of weight of floating object, weight of load and tilt angle');
             return false;
-        }
-        else if ((((Math.sign(valueA1)) || (Math.sign(valueB1)))=== (-1||0||-0))) {
+        }*/
+        /*if ((((Math.sign(valueA1)) || (Math.sign(valueB1)))=== (-1||0||-0))) {
             alert('Enter positive numeric value of weight of floating object and weight of load');
             return false;
         }
-        else if ((Math.tan(valueC2))=== Infinity){
+        else if ((Math.tan(valueC2))=== Infinity){ //todo check condition if required for tilt angle
             alert('Impossible result');
             return false;
-        }
+        }*/
         // else if ((Math.sign(valueD1))=== -1){
         //     alert('Load is displaced in left direction');
         //     return true;
@@ -179,12 +179,10 @@ window.view ={
         //     alert('Load is displaced in right direction');
         //     return true;
         // }
-        else {
-            model.inputValueA = valueA1;
-            model.inputValueB = valueB1;
-            model.inputValueC = valueC2 ;
-            model.inputValueD = valueD1; // todo work for sign change
-        }
+        model.inputValueA = 1.5;
+        model.inputValueB = 0.3056;
+            // model.inputValueC = valueC2 ;
+        model.inputValueD = valueD1; // todo work for sign change
         this.changePropertyOfElements();
         this.clearOutputValues();
         this.restoreCanvas();
@@ -192,7 +190,7 @@ window.view ={
     // restoreCanvas: restor canvas it's initial state after clear previously drawed canvas.
     restoreCanvas: function () {
         this.canvasContext.clearRect(0, 0, this.canvas.width, this.canvas.height); // to clear previously drawed canvas.
-        this.canvasContext.restore(); // restor canvas it's initial state.
+        this.canvasContext.restore(); // restore canvas it's initial state.
         this.drawCanvas(); // redraw graph on canvas.
     }, //todo change
 
@@ -210,6 +208,28 @@ window.view ={
     // stopExperiment: stop code execution at any point.
     stopExperiment: function () {
         this.endOfExecution();
+    },
+    // getCanvas: get canvas and canvasContext as a Object.
+    getCanvas: function () {
+        this.canvas = document.getElementById('myCanvas');
+        this.canvasContext = this.canvas.getContext('2d');
+    },
+    // drawCanvas: calls methods that are use to draw axis, text, lines and cos curve.
+    drawCanvas: function () {
+        this.drawLinearGradient();
+        this.canvasContext.save();
+    },
+    // to create water surface through linear gradient
+    drawLinearGradient: function() {
+        this.getCanvas();
+        this.canvasContext.beginPath();
+        var grd = this.canvasContext.createLinearGradient(400,150,400,300);
+        grd.addColorStop(0,"white");
+        grd.addColorStop(1,"blue");
+        this.canvasContext.font = "10px Arial";
+        // this.canvasContext.fillText("Water",20,50);
+        // this.canvasContext.fillStyle = grd;
+        // this.canvasContext.fillRect(0,0,500,100);
     },
     /* plotCurveArea: fill area under cos curve, show value of i and sum according code execution,
     and at the end of code execution display final result. */
@@ -232,8 +252,8 @@ window.view ={
         }
         else if (this.nextSiblingElement.id === 'NumApproCodeContent5') {
             this.executionWithColour();
-            this.setInnerHtml('valuei', '0');
-            this.setInnerHtml('valuesum', '0');
+            // this.setInnerHtml('valuei', '0');
+            // this.setInnerHtml('valuesum', '0');
         }
         else if (this.nextSiblingElement.id === 'NumApproCodeContent6') {
             this.executionWithColour();
@@ -262,7 +282,7 @@ window.view ={
 
     // init: calls methods to draw canvas and activate events.
     init: function () {
-        // this.drawCanvas();
+        this.drawCanvas();
         this.activateEvents();
     }
 }
