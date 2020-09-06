@@ -209,28 +209,6 @@ window.view ={
     stopExperiment: function () {
         this.endOfExecution();
     },
-    // getCanvas: get canvas and canvasContext as a Object.
-    getCanvas: function () {
-        this.canvas = document.getElementById('myCanvas');
-        this.canvasContext = this.canvas.getContext('2d');
-    },
-    // drawCanvas: calls methods that are use to draw axis, text, lines and cos curve.
-    drawCanvas: function () {
-        this.drawLinearGradient();
-        this.canvasContext.save();
-    },
-    // to create water surface through linear gradient
-    drawLinearGradient: function() {
-        this.getCanvas();
-        this.canvasContext.beginPath();
-        var grd = this.canvasContext.createLinearGradient(400,150,400,300);
-        grd.addColorStop(0,"white");
-        grd.addColorStop(1,"blue");
-        this.canvasContext.font = "10px Arial";
-        // this.canvasContext.fillText("Water",20,50);
-        // this.canvasContext.fillStyle = grd;
-        // this.canvasContext.fillRect(0,0,500,100);
-    },
     /* plotCurveArea: fill area under cos curve, show value of i and sum according code execution,
     and at the end of code execution display final result. */
     plotCurveArea: function () {
@@ -241,11 +219,11 @@ window.view ={
         this.nextSiblingElement = this.getNextSiblingElement(this.currentSiblingElement);
         if (this.nextSiblingElement.id === 'NumApproCodeContent2') {
             this.executionWithColour();
-            this.setInnerHtml('vari', 'i = ');
+            // this.setInnerHtml('vari', 'i = ');
         }
         else if (this.nextSiblingElement.id === 'NumApproCodeContent3') {
             this.executionWithColour();
-            this.setInnerHtml('varsum', 'sum = ');
+            // this.setInnerHtml('varsum', 'sum = ');
         }
         else if (this.nextSiblingElement.id === 'NumApproCodeContent4') {
             this.executionWithColour();
@@ -282,7 +260,7 @@ window.view ={
 
     // init: calls methods to draw canvas and activate events.
     init: function () {
-        this.drawCanvas();
+        // this.drawCanvas();
         this.activateEvents();
     }
 }
