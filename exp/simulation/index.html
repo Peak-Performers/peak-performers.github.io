@@ -18,16 +18,23 @@
 </head>
 
 <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
-<div id="header"> Numerical Integration ( Area Under Curve )</div>
+<div id="header"> Simulator</div>
 <a href="../index.html"><div class="vlabsIcon"></div></a>
 <div class="inputDivision">
     <div class="FirstInputBlock">
-        <div class="problemStatementDivisionTitle"><div class="problemPic"></div><div class="experimentText">Problem ?</div></div>
+        <div class="problemStatementDivisionTitle"><div class="problemPic"></div><div class="experimentText">Instructions</div></div>
         <div class="inputDivisionBody" id="inputDivisionSimpleLoop">
             <p></p><br/>
-            <p class="warningText">1. Given a well-behaved smooth function, integrate it over the given limits of integration ?</p><br/>
-            <p class="warningText">2. Approximating solution to integral a smooth function.</p><br/>
-            <p class="warningText">3. Integration Limits are from 0 to 30, b &gt; a and b-a &gt;= 1.</p><br/>
+            <p class="warningText">1. The slider here represents the number line referring to the distance of the object from the center in mm i.e for moving the object on the left -side, slide the slider to the direction of the negative numbers, and vice-versa.</p><br/>
+			<p class="warningText">2. The slider at first is at the 0mm from the center i.e. it is not moved to any distance.</p><br/>
+            <p class="warningText">3.  You can slide the slider either to left or in the right direction.</p><br/>
+            <p class="warningText">4. Each click on the slider represents the movement of the object from the center by 10mm i.e first click will move the object to 10mm, the second click will move it to 20mm, and so on.</p><br/>
+			<p class="warningText">5. The weight of the floating object is already calculated by using the formula W = V*Density of water, where V is the volume of water(V = Z*A) displaced from the tank due to the floating object. The Z is calculated as Z2-Z1.
+</p><br/>
+			<p class="warningText">6. The weight added to the floating body is fixed at 0.3056kg.
+</p><br/>
+			<p class="warningText">7. At each change of distance of the object, the tilt angle(θ) is calculated.</p><br/>
+			
         </div><!-- end of inputDivisionSimpleLoop -->
     </div><!-- end of FirstInputBlock -->
     <div class="SecondInputBlock">
@@ -48,19 +55,19 @@
     <div class="executionDivisionTitle"><div class="executionPic"></div><div class="executionText">Step Execution</div></div>
     <div class="stepExecutionDisplay">
         <div class="programCode" id="NumApproCode">
-            <div id="NumApproCodeContent1">Take an empty tank and fill it with water up, the height of the water level is (Z1).</div>
-            <div id="NumApproCodeContent2">Now place the floating body having weight W in the tank and the rise in the water level (Z2).</div>
-            <div id="NumApproCodeContent3">Adjust the floating ship.</div>
-            <div id="NumApproCodeContent4">After adjusting, add load of weight (w) to the horizontal beam of the floating body at centre of the beam.</div>
-            <div id="NumApproCodeContent5">Now displaced the load at a known distance Y from the centre of the beam. </div>
-            <div id="NumApproCodeContent6">Now the floating body will tilt at some angle on one side and observe the tilt angle.</div>
-            <div id="NumApproCodeContent7">Finally, calculate the metacentric height using the given formula.</div>
-            <div id="NumApproCodeContent8">Metacentric Height = (w*Y)/((W+w)*tan(a) </div>
+            <div id="NumApproCodeContent1">1. Take an empty tank and fill it with water up, the height of the water level is (Z1).</div>
+            <div id="NumApproCodeContent2">2. Now place the floating body having weight W in the tank,the water level rises upto Z2. </div>
+            <div id="NumApproCodeContent3">3. Adjust the floating ship.</div>
+            <div id="NumApproCodeContent4">4. After adjusting, add load of weight (w) to the horizontal beam of the floating body at centre of the beam.</div>
+            <div id="NumApproCodeContent5">5. Now displaced the load at a known distance Y from the centre of the beam. </div>
+            <div id="NumApproCodeContent6">6. Now the floating body will tilt at some angle on one side and observe the tilt angle.</div>
+            <div id="NumApproCodeContent7">7. Finally, calculate the metacentric height using the given formula.</div>
+            <div id="NumApproCodeContent8">Metacentric Height = (w*Y)/((W+w)*tan(θ) </div>
             <div id="NumApproCodeContent9">where,</div>
             <div id="NumApproCodeContent10">Weight of floating body = W <br/>
                 Additional weight added on the horizontal beam of the floating body = w <br/>
                 The distance of w from the center = Y<br/>
-                Tilt angle = a
+                Tilt angle = θ
                 <br/>
             </div>
         </div><!-- end of programCode -->
