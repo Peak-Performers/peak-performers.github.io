@@ -31,18 +31,9 @@
 </head>
 <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
 
-<nav class="navbar navbar-default1 visible-lg" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header1">
-        <img class="logo" src="../images/vlab.jpg" style=" width: 14%; height: 15%">
-        <img class="logo" src="../images/bn.png" style="float: right; width: 24%; height: 20%;">
-        <a class="navbar-brand1" href="#">Peak  Performers</a>
-    </div>
-</nav>
-
 <nav class="navbar navbar-default visible-lg" role="navigation">
     <div class="navbar-header">
-        <a class="navbar-brand" href="#"> Fire Tube Boiler</a>
+        <a class="navbar-brand" href="#">Metacentric Height of a Floating body</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,7 +58,7 @@
             <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation/index.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="index.html"><span class="glyphicon glyphicon-home"></span></a>
         </div>
     </nav>
-    <p class="experiment-mobile-title"> Fire Tube Boiler</p>
+    <p class="experiment-mobile-title"> Metacentric Height of a Floating body</p>
 </div>
 
 <div class="colorchanger">
@@ -83,8 +74,8 @@
             <li class="active"><a href="#intro">Introduction</a></li>
             <li><a href="#theory">Theory</a></li>
             <li><a href="#obj">Objective</a></li>
-            <li><a href="#man">Manual</a></li>
-            <li><a href="#proc">Procedure</a></li>
+            <li><a href="#man">Procedure</a></li>
+            <li><a href="#proc">Observation</a></li>
             <li><a href="#further-reading">Further Reading</a></li>
         </ul>
     </div>
@@ -94,7 +85,9 @@
             <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/intro.png"/></a>Introduction</p><hr/>
             <div class="manual-section-description">
                 <p>
-                    For many mathematical problems, such as finding area under a curve, it may not be possible to find an exact formula. But still these can be computed to arbitrary precision by using appoximate methods. In this lab you will learn how to code these approximation methods to solve these problems using a computer.
+                 The metacentric height (GM) is calculated as the distance between the center of gravity(G) of a floating body and its metacenter(M). It is the measure of the static stability of the floating body.   
+GM = BM - BG
+   
                 </p>
             </div>
         </div>
@@ -103,47 +96,51 @@
             <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/theory.png"></a>Theory</p><hr/>
             <div class="manual-section-description">
                 <p>
-                    The problem finding area under a curve means calculating the area between a give curve and the x-axis( the line y=0), between two limits, say x=a and x=b. As you can remember from you high school mathematics, this problem is easily solvable by finding the integral of the function and plugging the values of the limits in the intergral. The difference of the limits gives the area under then curve. But there are some mathematical functions which are not integrable. Also, this method is applicable for only smooth functions. Can something be done to find the area under the curves which are not well behaved?
-                </p>
+                 A point about which a floating body tries to oscillate is called the metacenter of that body. The distance between the metacenter (M) and the center of gravity (G) of the floating body is known as metacentric height (GM).
+When a small angular displacement is given to a body floating in a liquid, it starts oscillation about some point M. This point about which the body starts oscillating is called the metacenter.</p>
+<p> The following formula is used for the calculation of the Metacentric height of a floating body:</p>
+               <center><p><strong>GM = (w1.Y)/(W + w1). tan θ</strong></p></center>
+<p>Metacenter (M) may be defined as the point of intersection of the axis of the body passing through the center of gravity (G) and original center of buoyancy (B) and a vertical line passing through the new center of buoyancy (B) of the titled position of the body. 
+Buoyancy is the tendency of the fluid to lift a submerged body. The resultant upward force or thrust exerted by a fluid on the submerged body is known as Force of Buoyancy. According to Archimedes Principle, FB = weight of the volume of liquid displaced by the
+body.
+The Center of Gravity(G) is the point where is the weight of the body is acting.
+The Center of Buoyancy (B) is the point to which the force of Buoyancy is acting. The Center of Buoyancy is the center of gravity of the volume of liquid displaced by the body.</p><br/>
+<center> <img height="185px"src="Description.png" width="279px"/><br/></center>
                 <p>
-                    It turns out that people were able to "approximate" the solution to this problem to any reasonable arbitrary degree, for any arbitrary curve much before integration was discovered. As we all know that rectangle is the easiest of geometrical figures to find the area of, so the task of finding the area under a curve was expressed as a problem of finding the area of vertical rectangular strips. The boundary limits is divided into some x equal intervals of length(l) equal to l=(b-a)/n. Now, the area falling under each of these strips is approximated using an rectangle whose width is equal to the width of interval and height is equal to the value of the function at the beginning of the interval. A variation of this algorithm takes the value of the function at the middle of the interval. Now, the area under the curve is just the sum of areas of the individual strips.
-                </p><br/>
-                <img height="185px" src="arch.gif" width="279px"/><br/>
-                <p>
-                    It is easy to see that the result of this approximation would get better and better as the legnth of the interval is decreased. If they are made infinitesimally small, then we can get the exact area under the curve. But this is not possible using a computer where you can only specify numbers to a certain degree of precision. Still it is possible to approximate the area under the curve to a reasonable degree for practical purposes using a computer.
-                </p>
+                  The relation between the center of gravity and metacenter in different three types of equilibrium:</p>
+<ol type="a">
+<li><strong>Neutral equilibrium</strong>
+<p>If GM = 0 (M coinciding with G) </p></li>
+<li><strong>Stable equilibrium</strong>
+<p>If GM > 0 (M is above G) </p></li>
+<li><strong>Unstable equilibrium</strong>
+<p>If GM < 0 (M is below G) </p></li> 
+</ol>
+<center><img height="185px" src="stable.png" width="279px"/><br/></center>
             </div>
         </div>
         <div class="manual-section" id="obj">
             <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/obj.png"/></a>Objective</p><hr/>
             <div class="manual-section-description">
                 <p>
-                </p><ol>
-                <li>  To understand that for some problems an approximate numerial solution is as good as the exact solution for practical purposes. </li>
-                <li>  To understand how to apply these solutions to obtain arbitrary precision. </li>
-            </ol>
+                </p>
+
+                To calculate the Metacentric height of a floating body.
                 <p></p>
             </div>
         </div>
 
-        <div class="manual-section" id="man">
-            <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/sim.png"/></a>Manual</p><hr/>
-            <div class="manual-section-description">
-                <p>
-                    In this lab you calculate the area under the curve using approximation techniques.
-                </p>
-            </div>
-        </div>
+        
         <div class="manual-section" id="proc">
             <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/proc.png"/></a>Procedure</p><hr/>
             <div class="manual-section-description">
                 <p>
-                    Procedure for the experiment is as follows.
+                 The procedure to find the metacentric height of a floating body is as follows:  
                 </p>
                 <p>
                 </p><ol>
-                <li>  Read the Problem Statement.</li>
-                <li>  Press START to start the experiment </li>
+                <li> Take an empty tank and fill it with water up, the height of the water level is (Z1).  </li>
+                <li>   </li>
                 <li>  Select the limits of Integration i.e.  a and b. </li>
                 <li>  Press OK to save the value of a and b. </li>
                 <li>  Press NEXT to see the execution of the code. </li>
@@ -155,13 +152,24 @@
                 <p></p>
             </div>
         </div>
-
+<div class="manual-section" id="man">
+            <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/sim.png"/></a>Observations</p><hr/>
+            <div class="manual-section-description">
+                <p>
+                <li>  Weight of floating body = W</li>
+<li>Additional weight added on the horizontal beam of the floating body = w1</li>
+<li>The distance of w1 from the center = Y</li>
+<li>Tilt angle = θ</li>
+  
+                </p>
+            </div>
+        </div>
         <div class="manual-section" id="further-reading">
             <p class="manual-section-title"><a class="icon" href="#"><img src="../imgs/ref.png"/></a>Further Reading</p><hr/>
             <div class="manual-section-description">
                 <ol>
-                    <li><a href="http://en.wikipedia.org/wiki/Numerical_integration"> http://en.wikipedia.org/wiki/Numerical_integration </a></li>
-                    <li><a href="http://en.wikipedia.org/wiki/Numerical_analysis"> http://en.wikipedia.org/wiki/Numerical_analysis </a></li>
+                    <li><a href="http://en.wikipedia.org/wiki/Metacentric_Height"> http://en.wikipedia.org/wiki/Metacentric_Height </a></li>
+                    <li><a href="https://www.wartsila.com/encyclopedia/term/metacentric-height"> https://www.wartsila.com/encyclopedia/term/metacentric-height </a></li>
                 </ol>
             </div>
         </div>
